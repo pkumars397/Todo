@@ -9,12 +9,20 @@
 </head>
 
 <body>
-    <% if(kindofday==="Saturday" ) %>
-        <% { %>
-            <h1 style="color: rgb(40, 102, 157);">today is <%= kindofday %>
-            </h1>
-            <% }%>
+    <h1>
+        <%= kindofday %>
+    </h1>
+    <ul>
+     
+        <% for(var i=0;i<newListItems.length;i++){ %>
+            <li><%= newListItems[i] %></li>
+        <%}%>
+    </ul>
 
+    <form class="" action="/" method="post">
+        <input type="text" name="newItem">
+        <button type="submit" name="button">Add</button>
+    </form>
 </body>
 
 </html>
